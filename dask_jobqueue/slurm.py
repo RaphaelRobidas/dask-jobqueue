@@ -83,10 +83,10 @@ class SLURMJob(Job):
 
         # Init resources, always 1 task,
         # and then number of cpu is processes * threads if not set
-        header_lines.append("#SBATCH -n 1")
-        header_lines.append(
-            "#SBATCH --cpus-per-task=%d" % (job_cpu or self.worker_cores)
-        )
+        #header_lines.append("#SBATCH -n 1")
+        #header_lines.append(
+        #    "#SBATCH --cpus-per-task=%d" % (job_cpu or self.worker_cores)
+        #)
         # Memory
         memory = job_mem
         if job_mem is None:
